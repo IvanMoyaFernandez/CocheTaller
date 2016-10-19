@@ -39,6 +39,7 @@ public class MainVehiculos {
         }
 
         // Nos muestra todos los coches
+        System.out.println("- MOSTRAMOS TODOS LOS COCHES");
         System.out.println(registro.obtenerTodos());
     }
 }
