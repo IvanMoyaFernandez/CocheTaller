@@ -48,4 +48,30 @@ public class Coche {
                 ", modelo='" + modelo + '\'' +
                 ", precio=" + precio + '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Coche)) return false;
+
+        Coche coche = (Coche) o;
+
+        if (Double.compare(coche.getPrecio(), getPrecio()) != 0) return false;
+        if (!getMatricula().equals(coche.getMatricula())) return false;
+        if (!getMarca().equals(coche.getMarca())) return false;
+        return getModelo().equals(coche.getModelo());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = getMatricula().hashCode();
+        result = 31 * result + getMarca().hashCode();
+        result = 31 * result + getModelo().hashCode();
+        temp = Double.doubleToLongBits(getPrecio());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }

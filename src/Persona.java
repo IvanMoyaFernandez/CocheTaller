@@ -1,54 +1,37 @@
-/**
- * Created by ivanmoya on 05/10/2016.
- */
 public class Persona {
     private String dni;
     private String numeroSeguridadSocial;
     private String nombre;
     private String apellidos;
     private Integer edad;
+    private Double salario;
 
-
-    public Persona(String dni, String numeroSeguridadSocial, String nombre, String apellidos, Integer edad) {
+    public Persona(String dni, String numeroSeguridadSocial, String nombre, String apellidos, Integer edad, Double salario) {
         this.dni = dni;
         this.numeroSeguridadSocial = numeroSeguridadSocial;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
+        this.salario = salario;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public String getDni() {return dni;}
+    public void setDni(String dni) {this.dni = dni;}
 
-    public String getApellidos() {
-        return apellidos;
-    }
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
+    public String getNumeroSeguridadSocial() {return numeroSeguridadSocial;}
+    public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {this.numeroSeguridadSocial = numeroSeguridadSocial;}
 
-    public String getDni() {
-        return dni;
-    }
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
+    public String getNombre() {return nombre;}
+    public void setNombre(String nombre) {this.nombre = nombre;}
 
-    public Integer getEdad() { return edad; }
-    public void setEdad(Integer edad) {
-        this.edad = edad;
-    }
+    public String getApellidos() {return apellidos;}
+    public void setApellidos(String apellidos) {this.apellidos = apellidos;}
 
-    public String getNumeroSeguridadSocial() {
-        return numeroSeguridadSocial;
-    }
-    public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
-        this.numeroSeguridadSocial = numeroSeguridadSocial;
-    }
+    public Integer getEdad() {return edad;}
+    public void setEdad(Integer edad) {this.edad = edad;}
+
+    public Double getSalario() {return salario;}
+    public void setSalario(Double salario) {this.salario = salario;}
 
     @Override
     public boolean equals(Object o) {
@@ -72,11 +55,12 @@ public class Persona {
     @Override
     public String toString() {
         return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", apellidos='" + apellidos + '\'' +
-                ", dni='" + dni + '\'' +
-                ", edad=" + edad +
+                "dni='" + dni + '\'' +
                 ", numeroSeguridadSocial='" + numeroSeguridadSocial + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", edad=" + edad +
+                ", salario=" + salario +
                 '}';
     }
 }
