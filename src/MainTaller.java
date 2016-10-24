@@ -19,7 +19,12 @@ public class MainTaller {
         taller.registrarReparacion(kevin, Coche3);
         taller.registrarReparacion(cris, Coche4);
 
-        //System.out.println(taller.obtenerCoche(ivan));
-        //System.out.println(taller.obtenerClientes());
+        // Muestra el coche de la persona indicada
+        System.out.println("- COCHE DE ALVARO: ");
+        System.out.println(taller.obtenerCoche(alvaro));
+        // Muestra todos los clientes ordenados según el criterio indicado en el TreeMap
+        // dentro de Taller.java, ahora los ordena por nombre
+        System.out.println("- CLIENTES ORDENADOS POR NOMBRE: ");
+        System.out.println(taller.obtenerClientes());
     }
 }

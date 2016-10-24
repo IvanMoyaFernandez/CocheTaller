@@ -12,10 +12,13 @@ public class MainVehiculos {
         registro.registrarVehiculo(Coche2);
         registro.registrarVehiculo(Coche3);
         registro.registrarVehiculo(Coche4);
-        registro.registrarVehiculo(Coche4);
+
+        // Nos muestra todos los coches
+        System.out.println("- MOSTRAMOS TODOS LOS COCHES");
+        System.out.println(registro.obtenerTodos());
 
         // Obtener vehiculo por matricula
-                                        // != null. Solo muestra el coche si esa matricula está presente.
+                                        // != null. Solo muestra el coche si esa matricula está presente/si existe.
         System.out.println("- BUSCAR COCHE POR MATRICULA");
         registro.obtenerVehiculo("7534QQE").ifPresent(coche -> System.out.println("El coche con la matricula - 7534QQE - es el: " + coche));
 
@@ -25,7 +28,7 @@ public class MainVehiculos {
         registro.obtenerVehiculosMarca("Audi").forEach(coche -> System.out.println("Coche de marca Audi: " + coche));
 
         // Obtener vehiculo de mayor precio de venta
-                                        // != null. Solo muestra el valor si está presente.
+                                        // != null. Solo muestra el valor si está presente/si existe.
         System.out.println("- BUSCAR COCHE DE MAYOR PRECIO");
         registro.obtenerVehiculoPrecioMax().ifPresent(coche -> System.out.println("Coche de mayor precio es el: " + coche));
 
@@ -37,9 +40,5 @@ public class MainVehiculos {
         }else{
             System.out.println("El coche con matricula - 9446THJ - no existe.");
         }
-
-        // Nos muestra todos los coches
-        System.out.println("- MOSTRAMOS TODOS LOS COCHES");
-        System.out.println(registro.obtenerTodos());
     }
 }
