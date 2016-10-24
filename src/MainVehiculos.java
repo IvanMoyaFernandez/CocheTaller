@@ -21,7 +21,12 @@ public class MainVehiculos {
                                         // != null. Solo muestra el coche si esa matricula está presente/si existe.
         System.out.println("- BUSCAR COCHE POR MATRICULA");
         registro.obtenerVehiculo("7534QQE").ifPresent(coche -> System.out.println("El coche con la matricula - 7534QQE - es el: " + coche));
-
+        // Para que de un mensage en el caso de que la matricula sea NULL
+        if(!registro.obtenerVehiculo("1234567").isPresent()){
+            System.out.println("- Prueba para mostrar error.");
+            System.out.println("Introducimos matricula no registrada.. ");
+            System.out.println("ERROR: Buscador por matricula ha dado NULL!!");
+        }
         // Obtener vehiculo por marca
                                         // bucle que muestra coches mientras hayan con esa marca
         System.out.println("- BUSCAR COCHE POR MARCA");
